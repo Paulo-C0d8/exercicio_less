@@ -1,0 +1,120 @@
+@import "variaveis.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+.marginBottom8 {
+    margin-bottom: 8px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+
+body {
+    background-color: @CorDeFundo;
+    color: @CorDosTextos;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media @breakpointMobile {
+        max-width: 70%;
+    }
+
+    @media @breakpointTablet {
+        max-width: 80%;
+    }
+
+}
+
+header {
+    padding-bottom: 24px;
+
+    .avatar {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 50%;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.p-bio {
+    text-align: center;
+    letter-spacing: .5px;
+
+    .p-bio-name {
+        font-size: 16px;
+        .marginBottom8();
+    }
+
+    .p-bio-sub {
+        font-size: 14px;
+        .marginBottom8();
+    }
+
+    .p-bio-desc {
+    font-size: 14PX;
+    opacity: .6;
+    }
+
+    .p-bio-desc1 {
+        font-size: 14PX;
+        font-weight: bold;
+        opacity: .9;
+    }
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+    li {
+        img {
+            transition: all ease .3s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+.proj-list {
+    &-item {
+        a {
+            text-decoration: none;
+            background-color: @CorDosBotoes;
+            display: block;
+            padding: 16px 20px;
+            margin: 32px 0 16px 0;
+            text-align: center;
+            color: @CorDosTextosBotoes;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all ease .5s;
+            letter-spacing: 2px;
+
+            &:hover {
+                color: #7ee479;
+                background-color: transparent;
+                border: 2px solid @CorDasBordas;
+            }
+        }
+    }
+}
+
